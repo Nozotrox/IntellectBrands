@@ -55,18 +55,20 @@
 /*Setting*/
 .container_Header .setting{
     display: flex;
+    /* ::>> Avoided the Growing, but only te shrink */
+    flex: initial;
     flex-direction: column;
     background-color: #121212;
     min-width: 350px;
-
 }
 
 .container_Header .setting li{
     list-style: none;
-    flex: 1;
+    /*flex: 1;*/
 }
 
 .container_Header .setting nav{
+    /* ::>> Removed the margins*/
     margin: 10px;
 
 }
