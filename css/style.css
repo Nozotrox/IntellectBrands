@@ -23,10 +23,16 @@
 
 .container_Header .menu .nav_menu_left{
     display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
-.container_Header .menu .nav_menu_left li{
+.container_Header .menu .nav_menu_left ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.container_Header .menu .nav_menu_left ul li{
     list-style: none;
     flex: 1;
 }
@@ -69,7 +75,7 @@
 
 .container_Header .setting li{
     list-style: none;
-    /lex: 1;
+    flex: 1;
 }
 
 .container_Header .setting nav{
@@ -125,4 +131,26 @@
 .container_Header .banner a.navbar-brand{
     color: #fff;
     font-weight: bold;
+}
+
+
+@media screen and (max-width: 992px){
+    /*Cabecalho*/
+    .container_Header {
+        flex-direction: column;
+    }
+
+    .container_Header .menu{
+        z-index: 1;
+        height: 79px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+
+    .container_Header .menu .nav_menu_left ul{
+        flex-direction: row;
+        width: 100%;
+    }
+
 }
