@@ -64,6 +64,7 @@
 /*Setting*/
 .container_Header .setting{
     position: fixed;
+    top: 0;
     margin-left: 100px;
     height: 100%;
     display: flex;
@@ -106,7 +107,7 @@
 .container_Header .conteudo{
     position: relative;
     margin-left: 450px;
-    width: 1133px;
+    width: 100%;
 }
 
 .container_Header .banner{
@@ -134,13 +135,13 @@
 }
 
 
-@media screen and (max-width: 992px){
-    /*Cabecalho*/
+@media screen and (max-width: 992px) {
+    /*Cabecalho Mobile*/
     .container_Header {
         flex-direction: column;
     }
 
-    .container_Header .menu{
+    .container_Header .menu {
         z-index: 1;
         height: 79px;
         width: 100%;
@@ -148,9 +149,33 @@
         left: 0;
     }
 
-    .container_Header .menu .nav_menu_left ul{
+    /*Ainda nao funcionando*/
+    /*Centralizar Itens do Menu*/
+    .container_Header .menu .nav_menu_left{
+        justify-content: space-around;
+    }
+
+    .container_Header .menu .nav_menu_left ul {
         flex-direction: row;
         width: 100%;
+    }
+
+    /*Setting Mobile*/
+    .container_Header .setting {
+        top: 100%;
+        height: calc(100% - 79px);
+        margin-left: 0;
+        z-index: 1;
+        transition: 0.2s;
+    }
+
+    .container_Header .setting.active{
+        top: 0;
+    }
+
+    /*Banner*/
+    .container_Header .conteudo {
+        margin-left: 0px;
     }
 
 }
